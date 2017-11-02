@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # @Time    : 2017/10/20 下午2:18
-# @Author  : Aries
+# @Author  : hukezhu
 # @Site    : 
 # @File    : 1020-04-重新实现事件触发信号.py
 # @Software: PyCharm

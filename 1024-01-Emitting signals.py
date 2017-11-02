@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # @Time    : 2017/10/24 下午2:33
-# @Author  : Aries
+# @Author  : hukezhu
 # @Site    : 
 # @File    : 1024-01-Emitting signals.py
 # @Software: PyCharm

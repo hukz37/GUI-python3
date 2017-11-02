@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # @Time    : 2017/10/20 下午2:08
-# @Author  : Aries
+# @Author  : hukezhu
 # @Site    : 
 # @File    : 1020-03-发送信号&自定义槽函数.py
 # @Software: PyCharm
