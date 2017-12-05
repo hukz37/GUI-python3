@@ -23,7 +23,18 @@ class MyWindow(QtWidgets.QMainWindow,Ui_MainWindow):
         string = ''
         if self.tabWidget.currentIndex() == 0:
             todo = Todo()
-            string = '问答题:\n\n 问题:  %s \n\n 答案:    %s' %(self.lineEdit.text(),self.textEdit.toPlainText())
+            if len(self.lineEdit_14.text()) != 0 :
+                if self.lineEdit_14.text() == 'iOS':
+                    todo = iOS()
+                elif self.lineEdit_14.text() == 'Android':
+                    todo = Android()
+                elif self.lineEdit_14.text() == 'Python':
+                    todo = Python()
+                elif self.lineEdit_14.text() == 'Java':
+                    todo = Java()
+                elif self.lineEdit_14.text() == 'C':
+                    todo = C()
+            string = '%s\n\n\n问答题:\n\n 问题:  %s \n\n 答案:    %s' %(self.lineEdit_14.text(),self.lineEdit.text(),self.textEdit.toPlainText())
             if len(self.lineEdit.text()) == 0:
                 self.statusbar.showMessage('内容为空,不允许提交', msecs=0)
                 return
@@ -34,8 +45,19 @@ class MyWindow(QtWidgets.QMainWindow,Ui_MainWindow):
             todo.set('questiondescribe', self.textEdit.toPlainText())
         elif self.tabWidget.currentIndex() == 1:
             todo = Todo()
+            if len(self.lineEdit_14.text()) != 0 :
+                if self.lineEdit_14.text() == 'iOS':
+                    todo = iOS()
+                elif self.lineEdit_14.text() == 'Android':
+                    todo = Android()
+                elif self.lineEdit_14.text() == 'Python':
+                    todo = Python()
+                elif self.lineEdit_14.text() == 'Java':
+                    todo = Java()
+                elif self.lineEdit_14.text() == 'C':
+                    todo = C()
             print('现在选择的是选择题')
-            string = '选择题:\n\n 问题:  %s \n\n 选项:    \n\n    %s\n    %s\n    %s\n    %s\n    %s \n\n问题描述:\n\n%s' %(self.lineEdit_2.text(),self.lineEdit_3.text(),self.lineEdit_4.text(),self.lineEdit_5.text(),self.lineEdit_6.text(),self.lineEdit_7.text(),self.textEdit_2.toPlainText())
+            string = '%s\n\n\n选择题:\n\n 问题:  %s \n\n 选项:    \n\n    %s\n    %s\n    %s\n    %s\n    %s \n\n问题描述:\n\n%s' %(self.lineEdit_14.text(),self.lineEdit_2.text(),self.lineEdit_3.text(),self.lineEdit_4.text(),self.lineEdit_5.text(),self.lineEdit_6.text(),self.lineEdit_7.text(),self.textEdit_2.toPlainText())
             if len(self.lineEdit_2.text()) == 0:
                 self.statusbar.showMessage('内容为空,不允许提交', msecs=0)
                 return
@@ -130,6 +152,22 @@ class MyWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 
 
 class Todo(leancloud.Object):
+    pass
+
+class iOS(leancloud.Object):
+    pass
+
+class Python(leancloud.Object):
+    pass
+
+
+class Android(leancloud.Object):
+    pass
+
+class C(leancloud.Object):
+    pass
+
+class Java(leancloud.Object):
     pass
 
 class banner(leancloud.Object):

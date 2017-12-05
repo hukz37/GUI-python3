@@ -18,9 +18,9 @@
     <property name="geometry">
      <rect>
       <x>-10</x>
-      <y>10</y>
+      <y>20</y>
       <width>596</width>
-      <height>431</height>
+      <height>421</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -292,7 +292,7 @@
      <attribute name="title">
       <string>banner</string>
      </attribute>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>110</x>
@@ -467,6 +467,16 @@
      </item>
     </layout>
    </widget>
+   <widget class="QLineEdit" name="lineEdit_14">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>0</y>
+      <width>113</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -511,8 +521,14 @@
     <addaction name="action4_2"/>
     <addaction name="action5_2"/>
    </widget>
+   <widget class="QMenu" name="menu123">
+    <property name="title">
+     <string>123</string>
+    </property>
+   </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>
+   <addaction name="menu123"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="action2">
