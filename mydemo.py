@@ -124,7 +124,16 @@ class MyWindow(QtWidgets.QMainWindow,Ui_MainWindow):
                 return
             self.textBrowser.setPlainText(string)
             todo.set('imgUrl',self.lineEdit_11.text())
-
+        elif self.tabWidget.currentIndex() == 5 :
+            todo = video()
+            if (len(self.lineEdit_42.text()) == 0) or (len(self.lineEdit_43.text()) == 0):
+                self.statusbar.showMessage('内容为空,不允许提交', msecs=0)
+                return
+            string = '视频状态 : %s \n 名称 : %s \n 链接: %s' % (self.lineEdit_41.text(), self.lineEdit_42.text(),self.lineEdit_43.text())
+            self.textBrowser.setPlainText(string)
+            todo.set('state',self.lineEdit_41.text())
+            todo.set('videoName',self.lineEdit_42.text())
+            todo.set('videoUrl',self.lineEdit_43.text())
         todo.save()
 
         self.statusbar.showMessage('提交成功',msecs=2000)
@@ -143,6 +152,8 @@ class MyWindow(QtWidgets.QMainWindow,Ui_MainWindow):
         self.lineEdit_11.clear()
         self.lineEdit_12.clear()
         self.lineEdit_13.clear()
+        self.lineEdit_42.clear()
+        self.lineEdit_43.clear()
 
         self.checkBox.setChecked(False)
         self.checkBox_2.setChecked(False)
@@ -177,6 +188,9 @@ class textAd(leancloud.Object):
     pass
 
 class home_img1(leancloud.Object):
+    pass
+
+class video(leancloud.Object):
     pass
 
 if __name__ == '__main__':
